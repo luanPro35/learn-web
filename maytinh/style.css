@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    /* Gradient background */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.calculator {
+    background-color: #ecf0f1;
+    /* Lighter background */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Stronger shadow */
+    padding: 25px;
+    width: 350px;
+    /* Slightly wider */
+}
+
+.display {
+    margin-bottom: 15px;
+}
+
+#result {
+    width: 100%;
+    height: 60px;
+    /* Taller display */
+    font-size: 28px;
+    /* Larger font */
+    text-align: right;
+    border: none;
+    /* Remove border */
+    border-radius: 8px;
+    padding: 10px 15px;
+    /* More padding */
+    box-sizing: border-box;
+    background-color: #e0e0e0;
+    /* Light gray display background */
+    color: #333;
+    /* Dark text */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* Larger gap */
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    /* Taller buttons */
+    font-size: 20px;
+    /* Larger font */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #bdc3c7;
+    /* Light gray buttons */
+    color: #333;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Button shadow */
+}
+
+button:hover {
+    background-color: #95a5a6;
+    /* Darker on hover */
+    transform: translateY(-2px);
+    /* Lift effect on hover */
+}
+
+.operator {
+    background-color: #7f8c8d;
+    /* Darker gray for operators */
+    color: #fff;
+}
+
+.equal {
+    background-color: #27ae60;
+    /* Brighter green for equals */
+    color: white;
+    grid-column: 4;
+    /* Spans the last column */
+}
+
+.equal:hover {
+    background-color: #2ecc71;
+}
+
+.operator:hover {
+    background-color: #34495e;
+}

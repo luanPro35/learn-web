@@ -3,35 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ví dụ flex-wrap</title>
+    <title>Keyframes Animation</title>
     <style>
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        width: 300px;
-        padding: 10px;
-        background-color: lightgray;
-        border: 2px solid black;
-      }
       .box {
         width: 100px;
-        height: 50px;
-        text-align: center;
-        line-height: 50px;
-        background-color: orange;
-        border-radius: 5px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        animation: moveBox 3s infinite alternate;
+      }
+
+      @keyframes moveBox {
+        0% {
+          left: 0;
+          background-color: blue;
+        }
+        50% {
+          left: 50%;
+          background-color: yellow;
+        }
+        100% {
+          left: 90%;
+          background-color: red;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="box">A</div>
-      <div class="box">B</div>
-      <div class="box">C</div>
-      <div class="box">D</div>
-      <div class="box">E</div>
-      <div class="box">F</div>
-    </div>
+    <div class="box"></div>
   </body>
 </html>
