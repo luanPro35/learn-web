@@ -1,7 +1,13 @@
-.box {
-    margin-bottom: 20px;
-    height: 200px;
-    width: 200px;
-    background: rgb(131, 58, 180);
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(170, 62, 62, 1) 52%, rgba(252, 176, 69, 1) 100%);
+body {
+    counter-reset: section;
+    background-color: blanchedalmond;
+    padding-left: 30px;
+}
+
+h2 {
+    counter-increment: section;
+}
+
+h2::before {
+    content: "Phan " counter(section) ": ";
 }
