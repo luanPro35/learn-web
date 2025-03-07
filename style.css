@@ -1,13 +1,25 @@
-body {
-    counter-reset: section;
-    background-color: blanchedalmond;
-    padding-left: 30px;
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-h2 {
-    counter-increment: section;
+input:focus {
+    border-color: blue;
 }
 
-h2::before {
-    content: "Phan " counter(section) ": ";
+button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
 }

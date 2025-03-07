@@ -3,46 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flexbox Example</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Form với CSS</title>
     <style>
-      .flex-container {
-        display: flex;
-        justify-content: space-between; /* Các phần tử dàn đều, có khoảng cách */
-        flex-wrap: wrap; /* Cho phép xuống dòng khi không đủ chỗ */
-        background-color: lightgray;
-        padding: 20px;
-      }
-
-      .box {
-        width: 30%; /* Mỗi box chiếm khoảng 30% chiều rộng */
-        background-color: lightblue;
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 10px; /* Tạo khoảng cách giữa các hàng */
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
         border-radius: 5px;
+        border: 1px solid #ccc;
       }
-
-      @media (max-width: 768px) {
-        .box {
-          width: 48%; /* Trên mobile, mỗi box chiếm 48% để thành 2 cột */
-        }
+      input:focus {
+        border-color: blue;
       }
-
-      @media (max-width: 480px) {
-        .box {
-          width: 100%; /* Trên màn hình nhỏ, mỗi box chiếm toàn bộ chiều ngang */
-        }
+      button {
+        background-color: green;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: darkgreen;
       }
     </style>
   </head>
   <body>
-    <div class="flex-container">
-      <div class="box">Box 1</div>
-      <div class="box">Box 2</div>
-      <div class="box">Box 3</div>
-      <div class="box">Box 4</div>
-      <div class="box">Box 5</div>
-      <div class="box">Box 6</div>
-    </div>
+    <h2>Form Đăng Ký</h2>
+    <form>
+      <label for="name">Họ và tên:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="city">Chọn thành phố:</label>
+      <select id="city" name="city">
+        <option value="hanoi">Hà Nội</option>
+        <option value="hcm">TP. Hồ Chí Minh</option>
+      </select>
+
+      <label for="message">Tin nhắn:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Gửi</button>
+    </form>
   </body>
 </html>
