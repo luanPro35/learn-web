@@ -1,72 +1,42 @@
-.box1 {
-    background: green;
-}
-
-.box2 {
-    background: red;
-}
-
-.box3 {
-    background: blue;
-}
-
-.box4 {
-    background: yellow;
-}
-
-.box5 {
-    background: orange;
-}
-
-.box6 {
-    background: pink;
-}
-
 .container {
-    display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(3, 100px);
-    grid-gap: 10px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.box1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+
+.spiner {
+    --size: 200px;
+    --first-color: blue;
+    --second-color: yellow;
+    position: relative;
+    color: aliceblue;
+    font-size: 2rem;
 }
 
-.box2 {
-    grid-column-start: 3;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
+.spiner::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 30px solid var(--first-color);
+    border-top: 30px solid var(--second-color);
+    animation: spin 1s linear infinite;
 }
 
-.box3 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
 
-.box4 {
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
 
-.box5 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.box6 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    100% {
+        transform: rotate(360deg);
+    }
 }
