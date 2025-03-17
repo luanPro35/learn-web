@@ -1,42 +1,28 @@
-.container {
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-
-.spiner {
-    --size: 200px;
-    --first-color: blue;
-    --second-color: yellow;
+.card {
+    width: 200px;
+    height: 200px;
+    border: 5px solid blue;
+    border-radius: 10px;
     position: relative;
-    color: aliceblue;
-    font-size: 2rem;
 }
 
-.spiner::after {
-    content: "";
+img {
+    height: 200px;
+    width: 200px;
+}
+
+.thum {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.label {
+    background: red;
+    padding: 12px;
+    color: white;
+    font-weight: 700;
+    border-radius: 20px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: var(--size);
-    height: var(--size);
-    border-radius: 50%;
-    border: 30px solid var(--first-color);
-    border-top: 30px solid var(--second-color);
-    animation: spin 1s linear infinite;
-}
-
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+    top: 0;
+    right: 0;
 }
