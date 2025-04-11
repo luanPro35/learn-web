@@ -1,229 +1,31 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bản đồ Việt Nam</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Responsive Grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+      }
+      .item {
+        background: lightblue;
+        padding: 20px;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
   <body>
-    <div class="map-container">
-      <svg
-        width="300"
-        height="700"
-        viewBox="0 0 300 700"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <!-- Đường viền bản đồ Việt Nam (đơn giản hóa) -->
-        <path
-          id="outline"
-          d="M150,50 C100,100 80,200 90,300 C100,400 120,500 130,600 L170,600 C180,500 200,400 190,300 C180,200 160,100 150,50 Z"
-          fill="#ddd"
-          stroke="#000"
-          stroke-width="2"
-        />
-
-        <!-- Các tỉnh/thành phố (đại diện bằng hình tròn) -->
-        <!-- Miền Bắc -->
-        <circle cx="150" cy="50" r="4" class="province" data-name="Hà Nội" />
-        <circle cx="170" cy="60" r="4" class="province" data-name="Hải Phòng" />
-        <circle cx="180" cy="40" r="4" class="province" data-name="Lạng Sơn" />
-        <circle
-          cx="160"
-          cy="70"
-          r="4"
-          class="province"
-          data-name="Thái Nguyên"
-        />
-        <circle cx="130" cy="60" r="4" class="province" data-name="Sơn La" />
-        <circle cx="120" cy="80" r="4" class="province" data-name="Lai Châu" />
-        <circle cx="140" cy="90" r="4" class="province" data-name="Điện Biên" />
-        <circle
-          cx="165"
-          cy="50"
-          r="4"
-          class="province"
-          data-name="Quảng Ninh"
-        />
-        <circle cx="155" cy="80" r="4" class="province" data-name="Bắc Giang" />
-        <circle cx="145" cy="70" r="4" class="province" data-name="Bắc Ninh" />
-        <circle cx="175" cy="70" r="4" class="province" data-name="Hải Dương" />
-        <circle cx="160" cy="90" r="4" class="province" data-name="Hưng Yên" />
-        <circle cx="140" cy="100" r="4" class="province" data-name="Hà Nam" />
-        <circle cx="135" cy="110" r="4" class="province" data-name="Nam Định" />
-        <circle
-          cx="145"
-          cy="120"
-          r="4"
-          class="province"
-          data-name="Thái Bình"
-        />
-        <circle
-          cx="130"
-          cy="130"
-          r="4"
-          class="province"
-          data-name="Ninh Bình"
-        />
-        <circle cx="170" cy="80" r="4" class="province" data-name="Vĩnh Phúc" />
-        <circle cx="165" cy="100" r="4" class="province" data-name="Phú Thọ" />
-        <circle cx="180" cy="90" r="4" class="province" data-name="Yên Bái" />
-        <circle cx="185" cy="60" r="4" class="province" data-name="Hà Giang" />
-        <circle cx="175" cy="50" r="4" class="province" data-name="Cao Bằng" />
-        <circle cx="170" cy="40" r="4" class="province" data-name="Bắc Kạn" />
-        <circle
-          cx="155"
-          cy="110"
-          r="4"
-          class="province"
-          data-name="Tuyên Quang"
-        />
-        <circle cx="120" cy="120" r="4" class="province" data-name="Hòa Bình" />
-
-        <!-- Miền Trung -->
-        <circle
-          cx="145"
-          cy="150"
-          r="4"
-          class="province"
-          data-name="Thanh Hóa"
-        />
-        <circle cx="140" cy="170" r="4" class="province" data-name="Nghệ An" />
-        <circle cx="135" cy="190" r="4" class="province" data-name="Hà Tĩnh" />
-        <circle
-          cx="155"
-          cy="210"
-          r="4"
-          class="province"
-          data-name="Quảng Bình"
-        />
-        <circle
-          cx="150"
-          cy="230"
-          r="4"
-          class="province"
-          data-name="Quảng Trị"
-        />
-        <circle
-          cx="145"
-          cy="250"
-          r="4"
-          class="province"
-          data-name="Thừa Thiên Huế"
-        />
-        <circle cx="160" cy="270" r="4" class="province" data-name="Đà Nẵng" />
-        <circle
-          cx="155"
-          cy="290"
-          r="4"
-          class="province"
-          data-name="Quảng Nam"
-        />
-        <circle
-          cx="150"
-          cy="310"
-          r="4"
-          class="province"
-          data-name="Quảng Ngãi"
-        />
-        <circle
-          cx="165"
-          cy="330"
-          r="4"
-          class="province"
-          data-name="Bình Định"
-        />
-        <circle cx="160" cy="350" r="4" class="province" data-name="Phú Yên" />
-        <circle
-          cx="155"
-          cy="370"
-          r="4"
-          class="province"
-          data-name="Khánh Hòa"
-        />
-        <circle cx="140" cy="200" r="4" class="province" data-name="Kon Tum" />
-        <circle cx="135" cy="220" r="4" class="province" data-name="Gia Lai" />
-        <circle cx="130" cy="240" r="4" class="province" data-name="Đắk Lắk" />
-        <circle cx="125" cy="260" r="4" class="province" data-name="Đắk Nông" />
-        <circle cx="120" cy="280" r="4" class="province" data-name="Lâm Đồng" />
-
-        <!-- Miền Nam -->
-        <circle cx="150" cy="400" r="4" class="province" data-name="TP.HCM" />
-        <circle
-          cx="160"
-          cy="380"
-          r="4"
-          class="province"
-          data-name="Bình Dương"
-        />
-        <circle cx="165" cy="390" r="4" class="province" data-name="Đồng Nai" />
-        <circle
-          cx="170"
-          cy="410"
-          r="4"
-          class="province"
-          data-name="Bà Rịa - Vũng Tàu"
-        />
-        <circle
-          cx="140"
-          cy="390"
-          r="4"
-          class="province"
-          data-name="Bình Phước"
-        />
-        <circle cx="135" cy="380" r="4" class="province" data-name="Tây Ninh" />
-        <circle cx="145" cy="410" r="4" class="province" data-name="Long An" />
-        <circle
-          cx="140"
-          cy="430"
-          r="4"
-          class="province"
-          data-name="Tiền Giang"
-        />
-        <circle cx="135" cy="450" r="4" class="province" data-name="Bến Tre" />
-        <circle cx="130" cy="470" r="4" class="province" data-name="Trà Vinh" />
-        <circle
-          cx="125"
-          cy="490"
-          r="4"
-          class="province"
-          data-name="Vĩnh Long"
-        />
-        <circle cx="120" cy="510" r="4" class="province" data-name="Cần Thơ" />
-        <circle
-          cx="115"
-          cy="530"
-          r="4"
-          class="province"
-          data-name="Hậu Giang"
-        />
-        <circle
-          cx="110"
-          cy="550"
-          r="4"
-          class="province"
-          data-name="Kiên Giang"
-        />
-        <circle cx="105" cy="570" r="4" class="province" data-name="Cà Mau" />
-        <circle
-          cx="120"
-          cy="470"
-          r="4"
-          class="province"
-          data-name="Đồng Tháp"
-        />
-        <circle cx="125" cy="450" r="4" class="province" data-name="An Giang" />
-        <circle
-          cx="130"
-          cy="430"
-          r="4"
-          class="province"
-          data-name="Sóc Trăng"
-        />
-        <circle cx="135" cy="410" r="4" class="province" data-name="Bạc Liêu" />
-      </svg>
-      <div class="tooltip"></div>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
