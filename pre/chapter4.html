@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Demo</title>
+    <style>
+      .color-demo {
+        color: rgb(255, 87, 51);
+        background-color: #ff5733;
+        opacity: 0.8;
+      }
+
+      .font-demo {
+        font-size: 20px;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+        text-decoration: underline;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        line-height: 1.5;
+      }
+
+      .box-demo {
+        width: 200px;
+        height: 100px;
+        max-width: 300px;
+        padding: 20px;
+        margin: 10px;
+        border: 2px solid black;
+        box-sizing: border-box;
+      }
+
+      .display-demo {
+        display: inline-block;
+      }
+
+      .position-demo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        z-index: 10;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .flex-item {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px 100px;
+        gap: 10px;
+      }
+
+      .grid-item {
+        background-color: lightgreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hover-effect:hover {
+        background-color: yellow;
+        transition: background-color 0.5s ease-in-out;
+      }
+
+      @keyframes moveBox {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(100px);
+        }
+      }
+
+      .animation-demo {
+        animation: moveBox 2s infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="color-demo">Màu sắc</div>
+    <div class="font-demo">Kiểu chữ</div>
+    <div class="box-demo">Bố cục</div>
+    <div class="display-demo">Hiển thị phần tử</div>
+    <div class="position-demo">Định vị</div>
+
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+      <div class="grid-item">D</div>
+      <div class="grid-item">E</div>
+      <div class="grid-item">F</div>
+    </div>
+
+    <div class="hover-effect">Di chuột vào tôi</div>
+    <div class="animation-demo">Hoạt ảnh</div>
+  </body>
+</html>

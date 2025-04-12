@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chúc Em Một Hành Trình Tuyệt Vời Ở Đức! 🇩🇪</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Chúc Em Một Hành Trình Tuyệt Vời Ở Đức! 🇩🇪</h1>
+      <p class="message">
+        Anh chúc em sẽ có thật nhiều niềm vui, trải nghiệm thú vị và thành công
+        ở Đức nhé! ❤️ Dù xa nhau, anh luôn ở đây chờ em. Chúc em mọi điều tốt
+        đẹp nhất, cô gái 20 tuổi đáng yêu của anh!
+      </p>
+      <div class="scene">
+        <!-- Bánh kem SVG -->
+        <svg class="cake" width="120" height="120" viewBox="0 0 120 120">
+          <!-- Lớp kem dưới -->
+          <rect x="30" y="60" width="60" height="30" rx="10" fill="#ffccff" />
+          <!-- Lớp bánh -->
+          <rect x="30" y="70" width="60" height="30" rx="10" fill="#f5a623" />
+          <!-- Lớp kem trên -->
+          <rect x="30" y="50" width="60" height="30" rx="10" fill="#ff99cc" />
+          <!-- Kem trang trí trên cùng -->
+          <path
+            d="M40,50 Q60,30 80,50"
+            fill="#fff"
+            stroke="#ff66b3"
+            stroke-width="2"
+          />
+          <!-- Nến -->
+          <rect
+            class="candle"
+            x="55"
+            y="20"
+            width="10"
+            height="30"
+            rx="2"
+            fill="#ffeb3b"
+          />
+          <circle class="flame" cx="60" cy="15" r="5" fill="#ff4500" />
+        </svg>
+        <!-- Câu "20 tuổi" -->
+        <div class="age-label">20 tuổi</div>
+        <div class="flag">🇩🇪</div>
+        <div class="beer">🍺</div>
+        <div class="castle">🏰</div>
+        <div class="chicken left">🐔</div>
+        <div class="dog right">🐶</div>
+        <div class="balloon balloon1">🎈</div>
+        <div class="balloon balloon2">🎈</div>
+      </div>
+    </div>
+
+    <!-- Hiệu ứng rơi xuống -->
+    <div class="falling-items"></div>
+
+    <!-- Hiệu ứng pháo hoa -->
+    <div class="fireworks"></div>
+
+    <!-- Nhúng video YouTube ẩn -->
+    <iframe
+      id="birthdayMusic"
+      style="display: none"
+      src="https://www.youtube.com/embed/Wu8NeFXaoOc?autoplay=1&loop=1&playlist=Wu8NeFXaoOc"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+    ></iframe>
+
+    <!-- Nút bật/tắt nhạc -->
+    <div class="music-control">
+      <button id="toggleMusic" onclick="toggleMusic()">🔊 Tắt Nhạc</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -3,9 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hello.css" />
     <title>Document</title>
   </head>
   <body>
-    chao
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <nav class="navbar">
+        <div class="navbar-left">
+          <div class="logo">
+            <img class="logo-icon" src="img/logo-icon.png" alt="Logo Icon" />
+            <h3 class="logo-text">Estatery</h3>
+          </div>
+        </div>
+        <div class="menu">
+          <img class="menu-icon" src="img/menu-icon.png" alt="Menu Icon" />
+        </div>
+      </nav>
+
+      <header class="hero-header">
+        <h1 class="hero-title">Buy, rent, or sell your property easily</h1>
+        <h3 class="hero-subtitle">
+          A great platform to buy, sell, or even rent your properties without
+          any commissions.
+        </h3>
+      </header>
+
+      <section class="search-bar">
+        <div class="search-tabs">
+          <div class="tab tab-rent">
+            <span class="tab-text">Rent</span>
+            <div class="tab-indicator tab-indicator-rent"></div>
+          </div>
+          <div class="tab tab-buy">
+            <span class="tab-text">Buy</span>
+            <div class="tab-indicator tab-indicator-buy"></div>
+          </div>
+          <div class="tab tab-sell">
+            <span class="tab-text">Sell</span>
+            <div class="tab-indicator tab-indicator-sell"></div>
+          </div>
+        </div>
+        <div class="search-input-wrapper">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search location"
+          />
+          <button class="search-btn">
+            <img
+              src="img/search-icon.png"
+              alt="Search Icon"
+              class="search-btn-icon"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section class="stats">
+        <article class="stat stat-renters">
+          <div class="stat-icon">
+            <div class="stat-icon-content">
+              <img
+                src="img/people-icon.png"
+                alt="People Icon"
+                class="stat-icon-img"
+              />
+            </div>
+          </div>
+          <div class="stat-text">
+            <div class="stat-value">50K+ renters</div>
+            <div class="stat-description">believe in our service</div>
+          </div>
+        </article>
+
+        <article class="stat stat-properties">
+          <div class="stat-icon">
+            <div class="stat-icon-content">
+              <img
+                src="img/document-icon.png"
+                alt="Document Icon"
+                class="stat-icon-img"
+              />
+            </div>
+          </div>
+          <div class="stat-text">
+            <div class="stat-value">10K+ properties</div>
+            <div class="stat-description">ready for occupancy</div>
+          </div>
+        </article>
+      </section>
+    </section>
   </body>
 </html>

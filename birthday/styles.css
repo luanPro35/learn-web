@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd700, #ff4d94);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+}
+
+.title {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.message {
+    color: #fff;
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
+    border-radius: 20px;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.scene {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.cake {
+    position: absolute;
+    left: 90px;
+    top: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+.candle {
+    animation: candleGlow 1s infinite;
+}
+
+.flame {
+    animation: flicker 0.5s infinite;
+}
+
+.age-label {
+    position: absolute;
+    top: -20px;
+    left: 110px;
+    color: #ff4500;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px #fff;
+    animation: glowText 2s infinite;
+}
+
+.flag,
+.beer,
+.castle {
+    font-size: 3em;
+    position: absolute;
+    top: -40px;
+    animation: bounce 1.5s infinite;
+}
+
+.flag {
+    left: 20px;
+}
+
+.beer {
+    left: 120px;
+}
+
+.castle {
+    right: 20px;
+}
+
+.chicken,
+.dog {
+    font-size: 2em;
+    position: absolute;
+    bottom: -20px;
+    animation: dance 1.5s infinite;
+}
+
+.chicken.left {
+    left: -50px;
+    animation-delay: 0.2s;
+}
+
+.dog.right {
+    right: -50px;
+    animation-delay: 0.4s;
+}
+
+/* Bóng bay bay lên */
+.balloon {
+    font-size: 2em;
+    position: absolute;
+    bottom: 0;
+    animation: float 6s infinite ease-in-out;
+}
+
+.balloon1 {
+    left: 50px;
+    animation-delay: 0s;
+}
+
+.balloon2 {
+    right: 50px;
+    animation-delay: 2s;
+}
+
+/* Hiệu ứng rơi xuống */
+.falling-items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.falling-items div {
+    position: absolute;
+    font-size: 1.5em;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* Hiệu ứng pháo hoa */
+.fireworks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.fireworks div {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ffeb3b, transparent);
+    border-radius: 50%;
+    animation: explode 1.5s infinite;
+}
+
+/* Nút bật/tắt nhạc */
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+#toggleMusic {
+    padding: 10px 20px;
+    background: #ff66b3;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+#toggleMusic:hover {
+    background: #ff4d94;
+}
+
+/* Hiệu ứng phát sáng cho tiêu đề */
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ff66b3, 0 0 20px #ff66b3;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #ff66b3, 0 0 30px #ff66b3;
+    }
+}
+
+/* Hiệu ứng phát sáng cho chữ "20 tuổi" */
+@keyframes glowText {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #ff4500, 0 0 15px #ff4500;
+    }
+}
+
+/* Hiệu ứng xuất hiện cho thông điệp */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiệu ứng nảy */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Hiệu ứng nhảy múa của gà và chó */
+@keyframes dance {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(-5deg);
+    }
+}
+
+/* Hiệu ứng bay của bóng bay */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) translateX(20px);
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng rơi */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng pháo hoa */
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    70% {
+        transform: scale(3);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng nhấp nháy của ngọn lửa nến */
+@keyframes flicker {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Hiệu ứng sáng của nến */
+@keyframes candleGlow {
+
+    0%,
+    100% {
+        fill: #ffeb3b;
+    }
+
+    50% {
+        fill: #ffd700;
+    }
+}
